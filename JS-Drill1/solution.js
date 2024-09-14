@@ -55,9 +55,26 @@ function nameCity(index){
     nameCity(3);
 
 
+    //    Implement a loop to access and print the ages of all individuals in the dataset.
+
+
     function ages(){
         for(let i=0; i<arrayOfObjects.length;i++){
           console.log(`Name: ${arrayOfObjects[i].name} Age: ${arrayOfObjects[i].age}`);
         }
       }
       ages();
+
+
+      // Create a function to retrieve and display the first hobby of each individual in the dataset.
+
+
+  function firstHobby(){
+    let hobbies=[];
+    for(let i=0; i<arrayOfObjects.length;i++){
+      hobbies.push(arrayOfObjects[i].hobbies[0]);
+
+    }
+    return hobbies;
+  }
+  console.log(firstHobby());
