@@ -1,0 +1,1 @@
+import arrayOfObjects from "./persons";
