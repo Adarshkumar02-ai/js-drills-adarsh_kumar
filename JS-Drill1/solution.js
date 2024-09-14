@@ -53,3 +53,11 @@ function nameCity(index){
       }
     }
     nameCity(3);
+
+
+    function ages(){
+        for(let i=0; i<arrayOfObjects.length;i++){
+          console.log(arrayOfObjects[i].age);
+        }
+      }
+      ages();
