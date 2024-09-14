@@ -11,7 +11,8 @@ function getEmails(){
     }
      return emails;
   }
-  console.log(getEmails());
+
+
 
   // Implement a function that retrieves and prints the hobbies of individuals with a specific age, say 30 years old.
 
@@ -24,7 +25,7 @@ function getHobbies(age){
       }
     return hobbies;
   }
-  console.log(getHobbies(30));
+ 
 
 
 
@@ -39,7 +40,7 @@ function getStudents(){
       }
       return names;
     }
-    console.log(getStudents());
+    
 
     //    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
 
@@ -52,7 +53,7 @@ function nameCity(index){
         console.log("Index out of range");
       }
     }
-    nameCity(3);
+    
 
 
     //    Implement a loop to access and print the ages of all individuals in the dataset.
@@ -63,7 +64,7 @@ function nameCity(index){
           console.log(`Name: ${arrayOfObjects[i].name} Age: ${arrayOfObjects[i].age}`);
         }
       }
-      ages();
+      
 
 
       // Create a function to retrieve and display the first hobby of each individual in the dataset.
@@ -77,7 +78,7 @@ function nameCity(index){
     }
     return hobbies;
   }
-  console.log(firstHobby());
+ 
 
 
 
@@ -91,7 +92,7 @@ function nameCity(index){
           }
         }
       }
-      namesAndEmail(25);    
+        
 
 
 
@@ -103,4 +104,19 @@ function nameCity(index){
       console.log(`City: ${arrayOfObjects[i].city}, Country: ${arrayOfObjects[i].country}`);
     }
   }
-  cityAndCountry();
+  
+
+
+
+  export{
+    getEmails,
+    getHobbies,
+    getStudents,
+    nameCity,
+    ages,
+    firstHobby,
+    namesAndEmail,
+    cityAndCountry,
+
+
+  }
