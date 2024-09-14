@@ -28,3 +28,18 @@ function findUsersInGermany() {
     return result;
 }
 console.log(findUsersInGermany());
+
+
+
+// Q3 Find all users with masters Degree.
+
+function userWithMasters(){
+    const result = [];
+    for (const i in users){
+        if(users[i].qualification === "Masters"){
+            result.push(i);
+        }
+    }
+    return result;
+}
+console.log(userWithMasters());
