@@ -25,3 +25,18 @@ function getHobbies(age){
     return hobbies;
   }
   console.log(getHobbies(30));
+
+
+
+//    Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
+
+function getStudents(){
+    let names =[];
+    for(let i=0; i<arrayOfObjects.length; i++){
+      if(arrayOfObjects[i].isStudent && arrayOfObjects[i].country === 'Australia'){
+        names.push(arrayOfObjects[i].name);
+      }
+      }
+      return names;
+    }
+    console.log(getStudents());
