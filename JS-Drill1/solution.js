@@ -78,3 +78,21 @@ function nameCity(index){
     return hobbies;
   }
   console.log(firstHobby());
+
+
+
+    //  Write a function that accesses and prints the names and email addresses of individuals aged 25.
+
+    function namesAndEmail(age){
+        for(let i=0; i<arrayOfObjects.length;i++){
+          if(arrayOfObjects[i].age === age){
+            console.log(`Name: ${arrayOfObjects[i].name}, Email : ${arrayOfObjects[i].email}`);
+    
+          }
+        }
+      }
+      namesAndEmail(25);    
+
+
+
+      
