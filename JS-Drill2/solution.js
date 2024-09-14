@@ -12,7 +12,7 @@ function intrestedInVideogames(){
     }
     return result;
 }
-console.log(intrestedInVideogames());
+
 
 
 
@@ -27,7 +27,7 @@ function findUsersInGermany() {
     }
     return result;
 }
-console.log(findUsersInGermany());
+
 
 
 
@@ -42,7 +42,7 @@ function userWithMasters(){
     }
     return result;
 }
-console.log(userWithMasters());
+
 
 
 
@@ -79,4 +79,12 @@ function groupUsers(){
 }
 return result;
 }
-console.log(groupUsers());
+
+
+
+export {
+    intrestedInVideogames,
+    findUsersInGermany,
+    userWithMasters,
+    groupUsers,
+};
