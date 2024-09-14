@@ -57,7 +57,7 @@ function nameCity(index){
 
     function ages(){
         for(let i=0; i<arrayOfObjects.length;i++){
-          console.log(arrayOfObjects[i].age);
+          console.log(`Name: ${arrayOfObjects[i].name} Age: ${arrayOfObjects[i].age}`);
         }
       }
       ages();
