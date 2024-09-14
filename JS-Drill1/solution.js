@@ -40,3 +40,16 @@ function getStudents(){
       return names;
     }
     console.log(getStudents());
+
+    //    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
+
+function nameCity(index){
+    if(index >=0 && index< arrayOfObjects.length){
+      let person = arrayOfObjects[index];
+      console.log(`Name: ${person.name}, City: ${person.city}`)
+    }
+      else{
+        console.log("Index out of range");
+      }
+    }
+    nameCity(3);
