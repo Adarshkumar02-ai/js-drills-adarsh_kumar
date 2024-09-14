@@ -43,3 +43,40 @@ function userWithMasters(){
     return result;
 }
 console.log(userWithMasters());
+
+
+
+
+// Q4 Group users based on their Programming language mentioned in their designation.
+
+function groupUsers(){
+    const result = {};
+    for (const i in users){
+        if(users[i].desgination.includes("Javascript")){
+           if(result.hasOwnProperty("Javascript")){
+                   result["Javascript"].push(i);
+           }else{
+            result["Javascript"] = [i];
+           }
+        }
+        if(users[i].desgination.includes("Golang")){
+            if(result.hasOwnProperty("Golang")){
+                result["Golang"].push(i);
+            }
+            else{
+                result["Golang"] = [i];
+            }
+        }
+        if(users[i].desgination.includes("Python")){
+            if(result.hasOwnProperty("Python")){
+                result["Python"].push(i);
+            }
+            else{
+                result["Python"] = [i];
+    }
+}
+    
+}
+return result;
+}
+console.log(groupUsers());
