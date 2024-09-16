@@ -21,8 +21,7 @@ function each(elements, cb) {
       cb(elements[i], i);
     }
   }
-each(items, (item, index) => {
-    console.log(`Item at index ${index} : ${item}`)});
+
 
 
 
@@ -41,7 +40,7 @@ function map(elements, cb) {
 map(items, (items,item)=>{
   item = item *2;
 })
-console.log("map:", map(items, item => item * 2));
+
 
 
 function reduce(elements, cb, startingValue) {
@@ -57,11 +56,8 @@ for(let i=startIndex; i<elements.length; i++){
 }
 return accumulator;
 }
-const reduced = reduce(items,
-function(acc,item){
-  return acc+item;
-},0);
-console.log(reduced);
+
+
 
 
 
@@ -86,7 +82,7 @@ const found = find(items,
     return item>2;
   }
 );
-console.log(found);
+
 
 
 
@@ -105,12 +101,8 @@ function filter(elements, cb) {
   }
 return result;
 }
- const filtered = filter(items,
-  function(item){
-    return item%2 === 0;
-  }
- );
- console.log(filtered);
+ 
+ 
 
 
 
@@ -137,7 +129,20 @@ function flatten(elements) {
 }
 
 
-const flatArray = flatten(nestedArray);
-console.log(flatArray);
 
 
+
+
+
+
+export{
+      items,
+      each,
+      map,
+      reduce,
+      find,
+      filter,
+      nestedArray,
+      flatten,
+
+}
