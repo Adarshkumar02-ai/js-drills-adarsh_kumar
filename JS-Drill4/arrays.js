@@ -17,13 +17,12 @@ function each(elements, cb) {
   // This only needs to work with arrays.
   // You should also pass the index into `cb` as the second argument
   // based off http://underscorejs.org/#each
- 
     for (let i = 0; i < elements.length; i++) {
       cb(elements[i], i);
     }
   }
-each(items, function(item, index){
-  console.log(`Item at index ${index} : ${item}`)});
+each(items, (item, index) => {
+    console.log(`Item at index ${index} : ${item}`)});
 
 
 
@@ -32,7 +31,18 @@ function map(elements, cb) {
   // How map works: Map calls a provided callback function once for each element in an array, in order, and functionructs a new array from the res .
   // Produces a new array of values by mapping each value in list through a transformation function (iteratee).
   // Return the new array.
+
+  const result = [];
+  for (let i = 0; i < elements.length; i++) {
+    result.push(cb(elements[i], i));
+  }
+  return result;
 }
+map(items, (items,item)=>{
+  item = item *2;
+})
+console.log("map:", map(items, item => item * 2));
+
 
 function reduce(elements, cb, startingValue) {
   // Do NOT use .reduce to complete this function.
