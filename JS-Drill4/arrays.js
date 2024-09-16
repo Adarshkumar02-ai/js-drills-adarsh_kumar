@@ -97,8 +97,26 @@ function filter(elements, cb) {
   // Do NOT use .filter, to complete this function.
   // Similar to `find` but you will return an array of all elements that passed the truth test
   // Return an empty array if no elements pass the truth test
-
+  let result = [];
+  for(let i=0; i<elements.length; i++){
+    if(cb(elements[i])){
+      result.push(elements[i]);
+    }
+  }
+return result;
 }
+ const filtered = filter(items,
+  function(item){
+    return item%2 === 0;
+  }
+ );
+ console.log(filtered);
+
+
+
+
+
+
 
 const nestedArray = [1, [2], [[3]], [[[4]]]]; // use this to test 'flatten'
 
