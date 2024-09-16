@@ -77,8 +77,15 @@ console.log(transformed);
 function pairs(obj) {
   // Convert an object into a list of [key, value] pairs.
   // http://underscorejs.org/#pairs
+  let result = [];
+  for(let key in obj){
+    if(obj.hasOwnProperty(key)){
+      result.push([key, obj[key]]);
+    }
+  }
+  return result;
 }
-
+console.log(pairs(testObject));
 
 
 
