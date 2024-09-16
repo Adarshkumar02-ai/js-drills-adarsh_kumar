@@ -14,7 +14,7 @@ function findCarById(id){
     console.log(`car 33 is a ${flag.car_year} ${flag.car_make} ${flag.car_model}`);
 
 }
-findCarById(33);
+
 
 
 
@@ -27,8 +27,7 @@ function lastCar(){
     let last = inventory[inventory.length-1];
         return last;
 }
-const lcar = lastCar
-console.log(`Last car is a ${lcar.car_make} ${lcar.car_model}`);
+
 
 
 
@@ -55,8 +54,6 @@ for(let i=0; i<result.length;i++){
 return result;
 
 }
-const models = carModels();
-console.log(models);
 
 
 
@@ -71,7 +68,7 @@ function getAllCarYears(){
     }
     return result;
 }
-console.log(getAllCarYears());
+
 
 
 
@@ -95,7 +92,7 @@ function countCarsOlderThan2000() {
     console.log(`Number of cars older than 2000: ${count}`);
     // console.log(olderCars);
   }
-  countCarsOlderThan2000();
+ 
 
 
 
@@ -113,7 +110,7 @@ function getBMWandAudi(){
     }
     console.log(JSON.stringify(result));
 }
-getBMWandAudi();
+
 
 
 
