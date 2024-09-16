@@ -15,3 +15,17 @@ function findCarById(id){
 
 }
 findCarById(33);
+
+
+
+
+// // ==== Problem #2 ====
+// // The dealer needs the information on the last car in their inventory. Execute a function to find what the make and model of the last car in the inventory is?  Log the make and model into the console in the format of:
+// ("Last car is a *car make goes here* *car model goes here*");
+
+function lastCar(){
+    let last = inventory[inventory.length-1];
+        return last;
+}
+const lcar = lastCar
+console.log(`Last car is a ${lcar.car_make} ${lcar.car_model}`);
