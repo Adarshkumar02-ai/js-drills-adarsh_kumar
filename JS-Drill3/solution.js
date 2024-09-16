@@ -29,3 +29,31 @@ function lastCar(){
 }
 const lcar = lastCar
 console.log(`Last car is a ${lcar.car_make} ${lcar.car_model}`);
+
+
+
+
+// ==== Problem #3 ====
+// The marketing team wants the car models listed alphabetically on the website. Execute a function to Sort all the car model names into alphabetical order and log the results in the console as it was returned.
+
+function carModels(){
+    const result=[];
+    for(let i=0; i<inventory.length; i++){
+        result.push(inventory[i].car_model);
+    }
+// Bubble Sort Method    
+
+for(let i=0; i<result.length;i++){
+    for(let j=0; j<result.length-1;j++){
+        if(result[j] > result[j+1]){
+            const temp = result[j];
+            result[j] = result[j+1];
+            result[j+1] = temp;
+        }
+    }
+}
+return result;
+
+}
+const models = carModels();
+console.log(models);
