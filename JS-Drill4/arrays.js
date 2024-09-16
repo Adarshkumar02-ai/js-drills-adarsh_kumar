@@ -50,7 +50,25 @@ function reduce(elements, cb, startingValue) {
   // Elements will be passed one by one into `cb` along with the `startingValue`.
   // `startingValue` should be the first argument passed to `cb` and the array element should be the second argument.
   // `startingValue` is the starting value.  If `startingValue` is undefined then make `elements[0]` the initial value.
+let accumulator = startingValue !== undefined ? startingValue : elements[0];
+let startIndex = startingValue !== undefined ? 0 : 1;
+for(let i=startIndex; i<elements.length; i++){
+  accumulator = cb(accumulator, elements[i]);
 }
+return accumulator;
+}
+const reduced = reduce(items,
+function(acc,item){
+  return acc+item;
+},0);
+console.log(reduced);
+
+
+
+
+
+
+
 
 function find(elements, cb) {
   // Do NOT use .includes, to complete this function.
