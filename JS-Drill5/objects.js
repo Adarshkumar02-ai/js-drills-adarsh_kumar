@@ -10,7 +10,18 @@ function keys(obj) {
   // Retrieve all the names of the object's properties.
   // Return the keys as strings in an array.
   // Based on http://underscorejs.org/#keys
+    let keysArray=[];
+    for(let key in obj){
+      if(obj.hasOwnProperty(key)){
+        keysArray.push(key);
+      }
+    }
+    return keysArray;
+  
 }
+console.log(keys(testObject)); 
+
+
 
 function values(obj) {
   // Return all of the values of the object's own properties.
