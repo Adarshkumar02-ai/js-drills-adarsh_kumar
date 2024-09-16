@@ -27,7 +27,15 @@ function values(obj) {
   // Return all of the values of the object's own properties.
   // Ignore functions
   // http://underscorejs.org/#values
+let result = [];
+for(let key in obj){
+  if(obj.hasOwnProperty(key)){
+    result.push(obj[key]);
+  }
 }
+return result;
+}
+console.log(values(testObject));
 
 function mapObject(obj, cb) {
   // Like map for arrays, but for objects. Transform the value of each property in turn by passing it to the callback function.
