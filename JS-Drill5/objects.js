@@ -19,7 +19,7 @@ function keys(obj) {
     return keysArray;
   
 }
-console.log(keys(testObject)); 
+
 
 
 
@@ -39,7 +39,7 @@ for(let key in obj){
 }
 return result;
 }
-console.log(values(testObject));
+
 
 
 
@@ -64,7 +64,7 @@ const transformed = mapObject(testObject,
     return typeof value === 'string' ? value.toUpperCase() : value*2;
   }
 );
-console.log(transformed);
+
 
 
 
@@ -85,7 +85,8 @@ function pairs(obj) {
   }
   return result;
 }
-console.log(pairs(testObject));
+
+
 
 
 
@@ -111,7 +112,7 @@ function invert(obj) {
     }
     return result;
 }
-console.log(invert(testObject));
+
 
 
 
@@ -134,4 +135,17 @@ function defaults(obj, defaultProps) {
   return obj;
 
 }
-console.log(defaults(testObject));
+
+
+
+
+
+export{
+  testObject,
+  keys,
+  values,
+  mapObject,
+  pairs,
+  invert,
+  defaults,
+}
