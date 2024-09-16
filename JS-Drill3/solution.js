@@ -114,3 +114,14 @@ function getBMWandAudi(){
     console.log(JSON.stringify(result));
 }
 getBMWandAudi();
+
+
+
+export{
+    findCarById,
+    lastCar,
+    carModels,
+    getAllCarYears,
+    countCarsOlderThan2000,
+    getBMWandAudi,
+}
