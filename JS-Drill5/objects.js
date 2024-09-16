@@ -23,6 +23,10 @@ console.log(keys(testObject));
 
 
 
+
+
+
+
 function values(obj) {
   // Return all of the values of the object's own properties.
   // Ignore functions
@@ -37,15 +41,54 @@ return result;
 }
 console.log(values(testObject));
 
+
+
+
+
+
+
 function mapObject(obj, cb) {
   // Like map for arrays, but for objects. Transform the value of each property in turn by passing it to the callback function.
   // http://underscorejs.org/#mapObject
+
+  let result = {};
+  for(let key in obj){
+    if(obj.hasOwnProperty(key)){
+      result[key] = cb(obj[key]);
+    }
+  }
+  return result;
 }
+const transformed = mapObject(testObject,
+  function(value){
+    return typeof value === 'string' ? value.toUpperCase() : value*2;
+  }
+);
+console.log(transformed);
+
+
+
+
+
+
+
+
 
 function pairs(obj) {
   // Convert an object into a list of [key, value] pairs.
   // http://underscorejs.org/#pairs
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* STRETCH PROBLEMS */
 
@@ -53,7 +96,17 @@ function invert(obj) {
   // Returns a copy of the object where the keys have become the values and the values the keys.
   // Assume that all of the object's values will be unique and string serializable.
   // http://underscorejs.org/#invert
+
+
 }
+
+
+
+
+
+
+
+
 
 function defaults(obj, defaultProps) {
   // Fill in undefined properties that match properties on the `defaultProps` parameter object.
