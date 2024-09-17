@@ -27,8 +27,28 @@ function limitFunctionCallCount(cb, n) {
   // Should return a function that invokes `cb`.
   // The returned function should only allow `cb` to be invoked `n` times.
   // Returning null is acceptable if cb can't be returned
-  
+  let callCount = 0; 
+
+  return function(...args) {
+    if (callCount < n) { 
+      callCount++; 
+      return cb(...args); 
+    }
+    return null; 
+  };
 }
+
+function greeting(msg){
+  return msg;
+}
+
+const limitedGreet = limitFunctionCallCount(greeting,2);
+
+console.log(limitedGreet("Good Morning"));
+console.log(limitedGreet("Good Afternoon"));
+console.log(limitedGreet("Good Evening"));
+console.log(limitedGreet("Good Night"));
+
 
 
 
