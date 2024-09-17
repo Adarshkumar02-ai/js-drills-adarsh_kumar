@@ -59,5 +59,30 @@ function cacheFunction(cb) {
   // If the returned function is invoked with arguments that it has already seen
   // then it should return the cached result and not invoke `cb` again.
   // `cb` should only ever be invoked once for a given set of arguments.
- 
+  const cache = new Map(); 
+
+  return function(...args) {
+    const key = JSON.stringify(args); 
+
+    if (cache.has(key)) { 
+      return cache.get(key); 
+    }
+
+    const result = cb(...args); 
+    cache.set(key, result); 
+    return result; 
+  };
 }
+
+
+function multiply(a, b) {
+  console.log('Processing...'); 
+  return a * b;
+}
+
+const cachedProd = cacheFunction(multiply);
+
+
+console.log(cachedProd(1, 2)); 
+console.log(cachedProd(1, 2)); 
+console.log(cachedProd(2, 3)); 
